@@ -1,0 +1,20 @@
+apply plugin: 'groovy'
+
+group = "org.example"
+version = "0.1"
+description = "An awesome groovy library"
+
+repositories {
+    jcenter()
+}
+
+sourceSets {
+    main.groovy.srcDir 'src'
+    test.groovy.srcDir 'test'
+}
+
+dependencies {
+    // change this to 2.3.7 and the code will compile...
+    def groovyVersion = '2.4.0-beta-4'
+    compile "org.codehaus.groovy:groovy-all:${groovyVersion}"
+}
